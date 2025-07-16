@@ -1,40 +1,23 @@
 package main
 
-import (
-	"flag"
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var lang string
-	// memory addr, name of the option, default value, short description of the flag.
-	flag.StringVar(&lang, "lang", "en", "The required language, e.g. en, ur...")
-	// to scan the input parameter and fills every variable we've identified as a receiver.
-	flag.Parse()
-
-	greeting := greet(language(lang))
+	greeting := greet("en")
 	fmt.Println(greeting)
 }
 
 // language represents the language's code
 type language string
 
-// phrasebook holds greeting for each supported language
-var phrasebook = map[language]string{
-	"el": "Χαίρετε Κόσμε",     // Greek
-	"en": "Hello world",       // English
-	"fr": "Bonjour le monde",  // French
-	"he": "שלום עולם",         // Hebrew
-	"ur": "ہیلو دنیا",         // Urdu
-	"vi": "Xin chào Thế Giới", // Vietnamese
-}
-
-// greet says hello to the world in various languages
+// greet says hello to the world in the specified language
 func greet(l language) string {
-	greeting, ok := phrasebook[l]
-	if !ok {
-		return fmt.Sprintf("unsupported language: %q", l)
+	switch l {
+	case "en":
+		return "Hello world"
+	case "fr":
+		return "Bonjour le monde"
+	default:
+		return ""
 	}
-
-	return greeting
 }

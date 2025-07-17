@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Alice",
+    "books": [
+      {
+        "author": "George Orwell",
+        "title": "1984"
+      },
+      {
+        "author": "Aldous Huxley",
+        "title": "Brave New World"
+      }
+    ]
+  },
+  {
+    "name": "Bob",
+    "books": [
+      {
+        "author": "Ray Bradbury",
+        "title": "Fahrenheit 451"
+      },
+      {
+        "author": "Philip K. Dick",
+        "title": "Do Androids Dream of Electric Sheep?"
+      }
+    ]
+  },
+  {
+    "name": "Charlie"
+    "books": [
+      {
+        "author": "Isaac Asimov",
+        "title": "Foundation"
+      }
+    ]
+  }
+]
